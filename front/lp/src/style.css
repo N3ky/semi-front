@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+nav{
+    position: fixed;
+    background-color: #0a516d;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    animation: cima 2s ease-in-out;
+}
+
+@keyframes cima {
+    0%{
+        opacity: 0;
+        transform: translateY(-80px);
+    }
+}
+body{
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+.navItems{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    opacity: 0.7;
+    transition: all 200ms ease-in-out;
+}
+
+.navItems:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.navItems img{
+    width: 20px;
+    height: auto;
+}
+section{
+    min-height: 100vh;
+    height: auto;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 10px;
+    gap: 25px;
+    background-color: rgb(216, 189, 157);
+}
+footer a img{
+    opacity: 0.7px;
+    transition: all 200ms ease-in-out;
+}
+footer a img:hover{
+    opacity: 1;
+    cursor: pointer;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.s1{
+    background-image: url(../images/fundo1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    display: flex;
+}
+.s1 h1{
+    font-size: 100px;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 0px 3px 10px black;
+    width: 100%;
+    text-align: center;
+    padding: 3vw;
+    animation: esquerda 2s ease-in-out;
+}
+.s3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-color:#0a516d ;
+}
+a{
+    text-decoration: none;
+}
+
+.card{
+    background-color:#84afc0e9 ;
+    color: white;
+    font-size: 20px;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 3px 10px black;
+}
+.card img{
+    width: 100%;
+    height: auto;
+}
+@keyframes esquerda {
+    0%{
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+.s1 h2{
+    display: flex;
+    color: white;
+    text-shadow: 0px 3px 10px black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    animation: direita 2s ease-in-out;
+}
+@keyframes direita {
+    0%{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+.s4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #018790;
+    min-height: 60vh;
+}
+.video{
+    width: 560px;
+    height: 315px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-radius: 10px;
+}
+.s5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7dad93;
+}
+.formulario{
+    background-color:  #2b2726;
+    color: white;
+    box-shadow: 0px 3px 10px #2b2726;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.formulario label{
+    width: 100%;
+    margin: -10px;
+}
+
+.formulario input{
+    padding: 10px;
+    border: none;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid  #2b2726;
+    width: 100%;
+}
+
+input:focus{
+    outline: none;
+    color: #0a516d;
+    border-bottom: 2px solid #2b2726;
+}
+
+textarea{
+    max-width: 250px;
+    min-width: 250px;
+    min-height: 150px;
+    max-height: 150px;
+    padding: 10px;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    color: white;
+}
+
+button{
+    border: none;
+    padding: 10px;
+    border-radius: 2px solid white;
+    background: transparent;
+    transition: all 200ms linear;
+    width: 100%;
+}
+
+@media(width <= 800px){
+    nav{height: 60px;
+    gap: 5vw;
+    }
+    .navItems img{
+        width: 30px;
+    }
+    .navWords{
+        display: none;
+    }
+    .video{
+    width: 100%;
+    height: 315px;
+    border-radius: 0px;
+    }
+    .s1{
+        background-image: url(../images/mobilefundo.jpg);
+    }
+}
